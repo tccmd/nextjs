@@ -8,6 +8,7 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { createGlobalStyle} from 'styled-components'
+// import localFont from 'next/font/local'
 
 // 글로벌 스타일
 const GlobalStyle = createGlobalStyle`
@@ -16,8 +17,6 @@ body,
 textarea {
   paddig: 0;
   margin: 0;
-  font-family: -apple-system, BlikMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Canterell, Fira Sans, Droid Sans, Helvertica Neue, sans-serif;
 }
 
 * {
@@ -35,6 +34,8 @@ ol, ul {
   list-style: none;
 }
 `
+// // Font files can be colocated inside of `pages`
+// const myFont = localFont({ src: "./PretendardVariable.woff2" })
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
@@ -49,7 +50,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <meta property='og:type' content='website' />
     </Head>
     <GlobalStyle />
+    {/* <main className={myFont.className}> */}
     <Component {...pageProps} />
+    {/* </main> */}
     </>
   )
 }

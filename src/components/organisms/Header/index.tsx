@@ -1,14 +1,16 @@
 import Link from 'next/link'
 import Flex from '@/components/layout/Flex'
+import AppLogo from '@/components/atoms/AppLogo'
+import Btn_menu from "public/Icons/btn_menu.svg";
 
 const Header = () => {
   return (
     <Flex justifyContent="space-around" height="160px">
       <Link href="/" passHref>
-        <h1>logo</h1>
+        <AppLogo />
       </Link>
       <Link href="/menu" passHref>
-        <h1>메뉴 아이콘</h1>
+        <Btn_menu />
       </Link>
     </Flex>
   )
